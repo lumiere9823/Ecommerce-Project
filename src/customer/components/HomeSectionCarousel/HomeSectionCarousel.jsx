@@ -30,7 +30,7 @@ const createItems = (data, handleClick) => {
     ));
 };
 
-const HomeSectionCarousel = ({ data }) => {
+const HomeSectionCarousel = ({ data, sectionName }) => {
     const [activeIndex, setActiveIndex] = useState(0);
     const [items] = useState(createItems(data, setActiveIndex));
 
@@ -48,6 +48,7 @@ const HomeSectionCarousel = ({ data }) => {
 
     return (
         <div className='relative px-4 lg:px-10'>
+            <p style={{ fontSize: "20px", textTransform: "uppercase", fontWeight: "bolder", padding: "20px" }}>{sectionName}</p>
             <div className='relative p-5'>
                 <AliceCarousel
                     mouseTracking

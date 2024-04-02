@@ -5,10 +5,10 @@ import { homeCarouselData } from './MainCarouselData';
 
 const MainCarousel = () => {
 
-    const items = homeCarouselData.map((item) => <img className='cursor-pointer' src={item.image} style={{ display: 'block', margin: '0 auto' }} role='presentation' alt='' />);
+    const items = homeCarouselData.map((item) => <img className='cursor-pointer z-10' src={item.image} style={{ display: 'block', margin: '0 auto' }} role='presentation' alt='' />);
 
     return (
-        <div className='py-4'>
+        <div className='py-2 z-10'>
             <AliceCarousel
                 items={items}
                 disableButtonsControls
